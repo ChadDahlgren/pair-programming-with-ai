@@ -182,6 +182,40 @@ a:hover {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* Hamburger Menu - Pure CSS */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* ============================================
    NAVIGATION
    ============================================ */
@@ -1219,6 +1253,17 @@ a:hover {
     .nav-link {
         font-size: 1.125rem;
         padding: 1rem 1.25rem;
+
+    }
+    
+    /* Hide lab navigation button text on mobile */
+    .lab-nav-btn .btn-text {
+        display: none;
+    }
+    
+    .lab-nav-btn .arrow-left,
+    .lab-nav-btn .arrow-right {
+        font-size: 1.25rem;
     }
     
     .site-main {
