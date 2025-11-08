@@ -917,3 +917,212 @@ a:hover {
 .submit-button:active {
     transform: translateY(0);
 }
+
+/* ============================================
+   RESPONSIVE DESIGN - LARGE SCREENS
+   ============================================ */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    /* Increase sidebar width */
+    .site-wrapper {
+        grid-template-columns: 280px 1fr;
+    }
+    
+    /* Scale up typography */
+    body {
+        font-size: 17px;
+    }
+    
+    h1 {
+        font-size: 2.75rem;
+    }
+    
+    h2 {
+        font-size: 2.25rem;
+    }
+    
+    .page-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    /* Increase main content max-width */
+    .site-main {
+        max-width: 1400px;
+        padding: 3.5rem;
+    }
+    
+    .methodology .site-main {
+        max-width: 1100px;
+    }
+    
+    /* Scale up hero visual */
+    .hero-visual {
+        height: 350px;
+    }
+    
+    /* Improve comparison grid spacing */
+    .comparison-grid {
+        gap: 2.5rem;
+    }
+    
+    /* Scale up tool cards */
+    .tool-logo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Extra Large Desktop (1920px) */
+@media (min-width: 1920px) {
+    /* Further increase sidebar */
+    .site-wrapper {
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: 90px 1fr 70px;
+    }
+    
+    /* Scale typography for ultra-wide */
+    body {
+        font-size: 18px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .page-title {
+        font-size: 4rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    /* Max content width for readability */
+    .site-main {
+        max-width: 1600px;
+        padding: 4rem;
+    }
+    
+    .methodology .site-main {
+        max-width: 1200px;
+    }
+    
+    /* Scale header */
+    .site-header {
+        padding: 0 3rem;
+    }
+    
+    .site-logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Scale navigation */
+    .site-nav {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.0625rem;
+    }
+    
+    /* Hero visual */
+    .hero-visual {
+        height: 400px;
+    }
+    
+    .hero {
+        padding: 4rem;
+    }
+    
+    /* Content sections */
+    .content-section {
+        padding: 3rem;
+    }
+    
+    .lab-container {
+        padding: 3.5rem;
+    }
+    
+    .article-content {
+        padding: 4rem;
+    }
+    
+    /* Comparison grid - maintain 2 columns but with better spacing */
+    .comparison-grid {
+        gap: 3rem;
+    }
+    
+    .comparison-box {
+        padding: 2.5rem;
+    }
+    
+    /* Tool cards */
+    .tool-card {
+        padding: 2.5rem;
+        gap: 2.5rem;
+    }
+    
+    .tool-logo {
+        width: 140px;
+        height: 140px;
+    }
+    
+    /* Forms */
+    .form-container {
+        padding: 3.5rem;
+    }
+    
+    /* Footer */
+    .site-footer {
+        padding: 2rem 3rem;
+    }
+    
+    .footer-nav {
+        gap: 2.5rem;
+    }
+}
+
+/* Tablet and below - maintain mobile-first approach */
+@media (max-width: 768px) {
+    .site-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    
+    .site-nav {
+        display: none;
+    }
+    
+    .site-main {
+        padding: 2rem 1.5rem;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tool-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
