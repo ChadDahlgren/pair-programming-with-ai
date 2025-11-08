@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology - Pair Programming with AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="methodology">
+    <div class="site-wrapper">
+        <!-- Header -->
+        <header class="site-header">
+            <a href="index.html" class="site-logo">Pair Programming with AI</a>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="site-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="learning-lab.html" class="nav-link">Learning Lab</a></li>
+                <li class="nav-item"><a href="prompting.html" class="nav-link">Prompting</a></li>
+                <li class="nav-item"><a href="methodology.html" class="nav-link active">Methodology</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="site-main">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">The Orchestration Model</h1>
+            </div>
+            
+            <!-- Table of Contents -->
+            <nav class="toc">
+                <h2 class="toc-title">Table of Contents</h2>
+                <ol class="toc-list">
+                    <li><a href="#introduction" class="toc-link">1. Introduction: Why Traditional Approaches Fall Short</a></li>
+                    <li><a href="#model" class="toc-link">2. The Orchestration Model Explained</a></li>
+                    <li><a href="#mindset" class="toc-link">3. Mindset: Treating AI as a Teammate</a></li>
+                    <li><a href="#communication" class="toc-link">4. Communication Patterns</a></li>
+                    <li><a href="#conclusion" class="toc-link">5. Putting It All Together</a></li>
+                </ol>
+            </nav>
+            
+            <!-- Article Content -->
+            <article class="article-content">
+                <!-- Section 1 -->
+                <section id="introduction">
+                    <h2>Introduction: Why Traditional Approaches Fall Short</h2>
+                    <p>Most developers approach AI as a productivity tool—a way to generate code faster. They type a command, get some code back, and either use it or discard it. This transactional approach treats AI like a search engine for code snippets.</p>
+                    <p>The problem? This fundamentally misunderstands what AI can do. Modern AI coding assistants like Cursor, ChatGPT, and Copilot aren't just code generators—they're capable of understanding context, following complex instructions, and iterating on solutions. But to unlock this capability, you need a different mental model.</p>
+                    <p>There's a gap between code literacy (knowing how to write code) and AI fluency (knowing how to work with AI systems). This gap leads to frustration when AI doesn't "just know" what you want, and it causes developers to miss the real value: AI as a collaborative partner.</p>
+                </section>
+                
+                <div class="content-image">
+                    <span class="image-label">Conceptual Diagram</span>
+                    <span class="image-desc">Traditional vs. Orchestration Approach</span>
+                </div>
+                
+                <!-- Section 2 -->
+                <section id="model">
+                    <h2>The Orchestration Model Explained</h2>
+                    <p>The orchestration model reframes how you work with AI. Instead of issuing commands, you conduct a conversation. Instead of accepting or rejecting output, you guide refinement. The core loop looks like this:</p>
+                    <p><strong>Human sets direction</strong> → AI generates → <strong>Human reviews</strong> → Refinement → Iteration</p>
+                    <p>You stay in the architect role. You decide what to build, evaluate trade-offs, and maintain the vision. AI handles implementation details, suggests approaches, and helps you explore possibilities faster than you could alone.</p>
+                    <p>This isn't about letting AI write all your code. It's about having a conversation where AI contributes ideas, you provide constraints and context, and together you arrive at better solutions than either could produce independently.</p>
+                    
+                    <h3>Key Principles</h3>
+                    <p>The orchestration model rests on three foundations:</p>
+                    <p><strong>Context is cumulative.</strong> Each exchange builds on previous ones. AI remembers what you've discussed, the decisions you've made, and the patterns you prefer.</p>
+                    <p><strong>Iteration is expected.</strong> First attempts aren't final. You refine through conversation, just as you would with a human pair programming partner.</p>
+                    <p><strong>You maintain control.</strong> AI suggests, you decide. You're the architect, the quality gate, and the strategic thinker.</p>
+                </section>
+                
+                <div class="content-image">
+                    <span class="image-label">Process Diagram</span>
+                    <span class="image-desc">Orchestration Loop Visualization</span>
+                </div>
+                
+                <!-- Section 3 -->
+                <section id="mindset">
+                    <h2>Mindset: Treating AI as a Teammate</h2>
+                    <p>The shift from "code generator" to "programming partner" requires a mental reframe. Here's what changes:</p>
+                    
+                    <h3>Provide Context First</h3>
+                    <p>Before asking AI to write code, share what you're building, why it matters, and what constraints exist. Context helps AI give you relevant suggestions rather than generic solutions.</p>
+                    
+                    <h3>Be Clear About Intent</h3>
+                    <p>Describe your goal, not the implementation. "I need to validate user emails" is more useful than "write a regex function." Let AI help you discover the best approach.</p>
+                    
+                    <h3>Build Incrementally</h3>
+                    <p>Don't try to specify everything upfront. Start with core functionality, see what AI produces, then refine and expand. This mirrors how you'd work with a human partner.</p>
+                    
+                    <h3>Maintain Your Role</h3>
+                    <p>You're the architect. You evaluate AI's suggestions, push back when needed, and make the final call. AI accelerates your work but doesn't replace your judgment.</p>
+                </section>
+                
+                <!-- Section 4 -->
+                <section id="communication">
+                    <h2>Communication Patterns</h2>
+                    <p>Effective AI collaboration follows patterns similar to good human communication:</p>
+                    
+                    <h3>Start With Why</h3>
+                    <p>Explain what you're trying to accomplish before diving into specifics. "I'm building a dashboard that tracks user signups" gives AI more to work with than "create a chart."</p>
+                    
+                    <h3>Break Down Complexity</h3>
+                    <p>Large tasks become manageable when split into steps. Rather than "build a complete authentication system," try "first, let's handle password hashing."</p>
+                    
+                    <h3>Use Examples</h3>
+                    <p>Show AI what good looks like. "Similar to how Material UI handles form validation" gives AI a concrete reference point.</p>
+                    
+                    <h3>Iterate on Output</h3>
+                    <p>When AI's first attempt isn't quite right, don't start over. Say what needs to change: "This works, but let's make it handle null values."</p>
+                    
+                    <h3>Treat It Like Collaboration</h3>
+                    <p>Think of the exchange as a conversation, not a transaction. You're working together toward a solution, not extracting code from a vending machine.</p>
+                </section>
+                
+                <!-- Section 5 -->
+                <section id="conclusion">
+                    <h2>Putting It All Together</h2>
+                    <p>The orchestration model transforms AI from a code snippet generator into a genuine programming partner. By providing context, iterating through conversation, and maintaining your role as architect, you unlock AI's real potential.</p>
+                    <p>This approach takes practice. You'll develop intuition about when to be specific versus when to ask AI for suggestions, when to accept its approach versus when to redirect, and how to build context efficiently.</p>
+                    <p>Ready to see the orchestration model in action? Head to the <a href="learning-lab.html">Learning Lab</a> for video demonstrations of real coding scenarios. Or explore the <a href="prompting.html">Prompting</a> page for detailed techniques on crafting effective prompts.</p>
+                </section>
+            </article>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="site-footer">
+            <nav class="footer-nav">
+                <a href="learning-lab.html" class="footer-link">Learning Lab</a>
+                <a href="prompting.html" class="footer-link">Prompting</a>
+                <a href="resources.html" class="footer-link">Resources</a>
+                <a href="feedback.html" class="footer-link">Feedback</a>
+            </nav>
+            <div class="copyright">© 2025 Pair Programming with AI</div>
+        </footer>
+    </div>
+</body>
+</html>
+

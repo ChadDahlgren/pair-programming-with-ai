@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompting - Pair Programming with AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Header -->
+        <header class="site-header">
+            <a href="index.html" class="site-logo">Pair Programming with AI</a>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="site-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="learning-lab.html" class="nav-link">Learning Lab</a></li>
+                <li class="nav-item"><a href="prompting.html" class="nav-link active">Prompting</a></li>
+                <li class="nav-item"><a href="methodology.html" class="nav-link">Methodology</a></li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="site-main">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Designing Effective Prompts</h1>
+                <p class="page-intro">Learn how to build prompts that get better results from AI. Good prompts aren't written once—they're refined through conversation and iteration.</p>
+            </div>
+            
+            <!-- Core Principles -->
+            <section class="content-section">
+                <h2 class="section-title">Core Principles</h2>
+                <ul class="principles-list">
+                    <li>Start with context before giving commands</li>
+                    <li>Be specific about your goal, not the implementation</li>
+                    <li>Use examples to clarify your expectations</li>
+                    <li>Iterate based on the AI's output</li>
+                    <li>Build complexity gradually through conversation</li>
+                </ul>
+            </section>
+            
+            <!-- Examples Section -->
+            <section class="content-section">
+                <h2 class="section-title">Side-by-Side Comparison</h2>
+                <p>Here's how context and specificity transform a prompt from vague to effective:</p>
+                
+                <div class="comparison-grid">
+                    <!-- Less Effective -->
+                    <div class="comparison-box less-effective">
+                        <span class="comparison-label">Less Effective</span>
+                        <div class="comparison-example">
+                            "Create a function to sort data"
+                        </div>
+                        <p class="comparison-explanation">
+                            Why it's less effective: No context about what kind of data, how it should be sorted, or what edge cases to handle. AI has to guess your intent.
+                        </p>
+                    </div>
+                    
+                    <!-- More Effective -->
+                    <div class="comparison-box more-effective">
+                        <span class="comparison-label">More Effective</span>
+                        <div class="comparison-example">
+                            "I'm building a dashboard that displays user analytics. I need to sort an array of user objects by signup date, newest first. The array might be empty, and dates are stored as ISO strings. Can you create a sorting function that handles these cases?"
+                        </div>
+                        <p class="comparison-explanation">
+                            Why it's better: Provides context (dashboard), specific requirements (newest first, ISO strings), edge cases (empty array), and clear expectations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Using AI Section -->
+            <section class="content-section">
+                <h2 class="section-title">Using AI to Build Your Prompt</h2>
+                <p>One of the most powerful techniques is using AI to help you craft better prompts. Start with a rough idea of what you need, then ask AI to help you refine it:</p>
+                <p style="margin-top: 1.5rem;"><strong>Example workflow:</strong></p>
+                <ol style="margin-left: 2rem; margin-top: 1rem; color: var(--text-muted);">
+                    <li style="margin-bottom: 0.75rem;">Share your rough idea with AI</li>
+                    <li style="margin-bottom: 0.75rem;">Ask AI what additional context would be helpful</li>
+                    <li style="margin-bottom: 0.75rem;">Refine the prompt together through conversation</li>
+                    <li style="margin-bottom: 0.75rem;">Arrive at a clear, effective prompt for your task</li>
+                </ol>
+                <p style="margin-top: 1.5rem;">This iterative approach means you don't need to know the "perfect" way to prompt upfront. The orchestration model applies to prompt design itself.</p>
+            </section>
+            
+            <!-- Resources -->
+            <section class="content-section">
+                <h2 class="section-title">Downloads & Resources</h2>
+                <ul class="resources-list">
+                    <li>Prompt Template Worksheet (PDF)</li>
+                    <li>Cursor Rules Example Files</li>
+                    <li>Common Prompt Patterns Cheat Sheet</li>
+                </ul>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="site-footer">
+            <nav class="footer-nav">
+                <a href="learning-lab.html" class="footer-link">Learning Lab</a>
+                <a href="prompting.html" class="footer-link">Prompting</a>
+                <a href="resources.html" class="footer-link">Resources</a>
+                <a href="feedback.html" class="footer-link">Feedback</a>
+            </nav>
+            <div class="copyright">© 2025 Pair Programming with AI</div>
+        </footer>
+    </div>
+</body>
+</html>
+
