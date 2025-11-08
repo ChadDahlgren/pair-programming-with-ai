@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#150320" rx="8"/>
+  
+  <!-- Left Bracket (Human) -->
+  <path d="M 18 16 Q 12 32 18 48" stroke="#c07af1" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 18 16 L 24 16" stroke="#c07af1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 18 48 L 24 48" stroke="#c07af1" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Right Bracket (AI) -->
+  <path d="M 46 16 Q 52 32 46 48" stroke="#e7ac20" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 46 16 L 40 16" stroke="#e7ac20" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 46 48 L 40 48" stroke="#e7ac20" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Connection -->
+  <line x1="28" y1="28" x2="36" y2="28" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  <line x1="28" y1="32" x2="36" y2="32" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  <line x1="28" y1="36" x2="36" y2="36" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  
+  <circle cx="28" cy="28" r="2" fill="#c07af1"/>
+  <circle cx="28" cy="32" r="2" fill="#c07af1"/>
+  <circle cx="28" cy="36" r="2" fill="#c07af1"/>
+  <circle cx="36" cy="28" r="2" fill="#e7ac20"/>
+  <circle cx="36" cy="32" r="2" fill="#e7ac20"/>
+  <circle cx="36" cy="36" r="2" fill="#e7ac20"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="#150320" stroke="#c07af1" stroke-width="2"/>
+  
+  <!-- Left Bracket (Human) -->
+  <path d="M 60 60 Q 50 100 60 140" stroke="#c07af1" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 60 60 L 75 60" stroke="#c07af1" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 60 140 L 75 140" stroke="#c07af1" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Right Bracket (AI) -->
+  <path d="M 140 60 Q 150 100 140 140" stroke="#e7ac20" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 140 60 L 125 60" stroke="#e7ac20" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 140 140 L 125 140" stroke="#e7ac20" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Connection Lines (Collaboration) -->
+  <line x1="85" y1="85" x2="115" y2="85" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  <line x1="85" y1="100" x2="115" y2="100" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  <line x1="85" y1="115" x2="115" y2="115" stroke="#efdffc" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Small Circuit Nodes -->
+  <circle cx="85" cy="85" r="3" fill="#c07af1"/>
+  <circle cx="85" cy="100" r="3" fill="#c07af1"/>
+  <circle cx="85" cy="115" r="3" fill="#c07af1"/>
+  <circle cx="115" cy="85" r="3" fill="#e7ac20"/>
+  <circle cx="115" cy="100" r="3" fill="#e7ac20"/>
+  <circle cx="115" cy="115" r="3" fill="#e7ac20"/>
+</svg>
