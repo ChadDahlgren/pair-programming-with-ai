@@ -94,6 +94,7 @@ a:hover {
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -111,6 +112,74 @@ a:hover {
 
 .site-logo:hover {
     color: var(--accent);
+}
+
+/* Hamburger Menu - Pure CSS */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Hamburger Menu - Pure CSS */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .site-header .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* ============================================
@@ -1114,8 +1183,42 @@ a:hover {
         grid-template-rows: auto 1fr auto;
     }
     
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Mobile navigation */
     .site-nav {
-        display: none;
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 80px);
+        background: var(--background);
+        border-left: 1px solid var(--border);
+        border-right: none;
+        padding: 2rem 1rem;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .menu-toggle:checked ~ .site-nav {
+        right: 0;
+    }
+    
+    .nav-list {
+        margin-top: 1rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.25rem;
+    }
+    
+    .nav-link {
+        font-size: 1.125rem;
+        padding: 1rem 1.25rem;
     }
     
     .site-main {
@@ -1139,5 +1242,19 @@ a:hover {
     
     .btn {
         width: 100%;
+    }
+    
+    /* Footer - stack navigation and copyright */
+    .site-footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+    
+    .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
     }
 }
