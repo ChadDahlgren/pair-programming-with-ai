@@ -1,5 +1,6 @@
 # Pair Programming with AI
 Site: [https://pairprogramming.ai/](https://pairprogramming.ai/)
+
 Hosted with Cloudflare
 
 ## Project Overview
