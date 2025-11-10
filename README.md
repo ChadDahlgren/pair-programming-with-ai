@@ -67,9 +67,6 @@ Software developers, engineering students, and technical leaders who use AI in t
 ├── css/
 │   ├── styles.css
 │   └── components/
-├── js/
-│   ├── script.js
-│   └── modules/
 ├── assets/
 │   ├── images/
 │   ├── videos/
