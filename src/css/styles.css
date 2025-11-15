@@ -14,6 +14,10 @@
   --border: rgba(192, 122, 241, 0.2);
   --success: #2ecc71;
   --warning: #e74c3c;
+
+  /* Typography */
+  --font-mono: "Red Hat Mono", monospace;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* ============================================
@@ -33,6 +37,53 @@
 }
 
 /* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.hero-visual-label,
+.video-label,
+.image-label {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.comparison-label {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.site-logo,
+.btn,
+.lab-nav-btn,
+.lab-counter,
+.comparison-example,
+.tool-link,
+.form-label,
+.submit-button {
+  font-family: var(--font-mono);
+}
+
+.footer-link,
+.copyright {
+  font-size: 0.875rem;
+}
+
+.article-content table caption,
+.article-content table thead th,
+.article-content table tbody th[scope="row"] {
+  font-family: var(--font-mono);
+}
+
+/* ============================================
    RESET
    ============================================ */
 * {
@@ -49,8 +100,7 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: var(--font-body);
   background-color: var(--background);
   color: var(--text);
   line-height: 1.6;
@@ -65,7 +115,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Red Hat Mono", monospace;
+  font-family: var(--font-mono);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -152,7 +202,6 @@ a:hover {
 }
 
 .site-logo {
-  font-family: "Red Hat Mono", monospace;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--primary);
@@ -164,7 +213,7 @@ a:hover {
   color: var(--accent);
 }
 
-/* Hamburger Menu - Pure CSS */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
 }
@@ -275,7 +324,6 @@ a:hover {
 
 .footer-link {
   color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 .footer-link:hover {
@@ -284,7 +332,6 @@ a:hover {
 
 .copyright {
   color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 /* ============================================
@@ -365,13 +412,6 @@ a:hover {
   gap: 1rem;
 }
 
-.hero-visual-label {
-  font-family: "Red Hat Mono", monospace;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
 
 .hero-visual-desc {
   color: var(--primary);
@@ -441,7 +481,6 @@ a:hover {
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
-  font-family: "Red Hat Mono", monospace;
   cursor: pointer;
   transition: all 0.2s;
   border: none;
@@ -492,7 +531,6 @@ a:hover {
   border: 1px solid var(--primary);
   border-radius: 8px;
   color: var(--text);
-  font-family: "Red Hat Mono", monospace;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -508,7 +546,6 @@ a:hover {
 }
 
 .lab-counter {
-  font-family: "Red Hat Mono", monospace;
   color: var(--accent);
   font-weight: 600;
 }
@@ -557,13 +594,6 @@ a:hover {
   color: var(--background);
 }
 
-.video-label {
-  font-family: "Red Hat Mono", monospace;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
 
 /* Lab Content Sections */
 .lab-section {
@@ -575,7 +605,6 @@ a:hover {
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 1rem;
-  font-family: "Red Hat Mono", monospace;
 }
 
 .lab-section-content {
@@ -654,18 +683,6 @@ a:hover {
   border: 2px solid var(--success);
 }
 
-.comparison-label {
-  font-family: "Red Hat Mono", monospace;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-}
-
 .comparison-box.less-effective .comparison-label {
   background: rgba(231, 76, 60, 0.2);
   color: var(--warning);
@@ -680,7 +697,6 @@ a:hover {
   background: rgba(192, 122, 241, 0.08);
   border-radius: 8px;
   padding: 1.5rem;
-  font-family: "Red Hat Mono", monospace;
   font-size: 0.9375rem;
   color: var(--text);
   line-height: 1.6;
@@ -733,10 +749,6 @@ a:hover {
   font-size: 1.0625rem;
 }
 
-.methodology .site-main {
-  max-width: 900px;
-}
-
 .methodology .page-header {
   margin-bottom: 3rem;
 }
@@ -755,7 +767,6 @@ a:hover {
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 1.5rem;
-  font-family: "Red Hat Mono", monospace;
 }
 
 .toc-list {
@@ -808,14 +819,6 @@ a:hover {
   gap: 1rem;
 }
 
-.image-label {
-  font-family: "Red Hat Mono", monospace;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
 .image-desc {
   color: var(--primary);
 }
@@ -840,7 +843,6 @@ a:hover {
 }
 
 .article-content table caption {
-  font-family: "Red Hat Mono", monospace;
   font-size: 0.875rem;
   color: var(--text-muted);
   text-align: left;
@@ -854,7 +856,6 @@ a:hover {
 }
 
 .article-content table thead th {
-  font-family: "Red Hat Mono", monospace;
   font-weight: 600;
   color: var(--primary);
   text-align: left;
@@ -868,7 +869,6 @@ a:hover {
 }
 
 .article-content table tbody th[scope="row"] {
-  font-family: "Red Hat Mono", monospace;
   color: var(--text);
   font-weight: 600;
   background: rgba(192, 122, 241, 0.08);
@@ -984,7 +984,6 @@ a:hover {
   font-weight: 600;
   color: var(--primary);
   margin-bottom: 0.75rem;
-  font-family: "Red Hat Mono", monospace;
 }
 
 .tool-description {
@@ -999,7 +998,6 @@ a:hover {
   gap: 0.5rem;
   color: var(--accent);
   font-weight: 600;
-  font-family: "Red Hat Mono", monospace;
 }
 
 .tool-link::after {
@@ -1024,7 +1022,6 @@ a:hover {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--primary);
-  font-family: "Red Hat Mono", monospace;
 }
 
 .download-list {
@@ -1078,7 +1075,6 @@ a:hover {
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.5rem;
-  font-family: "Red Hat Mono", monospace;
 }
 
 .form-label .required {
@@ -1093,7 +1089,7 @@ a:hover {
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--text);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   transition: all 0.2s;
 }
@@ -1130,7 +1126,6 @@ a:hover {
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-family: "Red Hat Mono", monospace;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -1183,10 +1178,6 @@ a:hover {
   .site-main {
     max-width: 1400px;
     padding: 3.5rem;
-  }
-
-  .methodology .site-main {
-    max-width: 1100px;
   }
 
   /* Scale up hero visual */
@@ -1243,10 +1234,6 @@ a:hover {
   .site-main {
     max-width: 1600px;
     padding: 4rem;
-  }
-
-  .methodology .site-main {
-    max-width: 1200px;
   }
 
   /* Scale header */
