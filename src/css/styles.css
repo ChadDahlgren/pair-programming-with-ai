@@ -17,7 +17,8 @@
 
   /* Typography */
   --font-mono: "Red Hat Mono", monospace;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 /* ============================================
@@ -77,6 +78,9 @@
   font-size: 0.875rem;
 }
 
+.content-section table caption,
+.content-section table thead th,
+.content-section table tbody th[scope="row"],
 .article-content table caption,
 .article-content table thead th,
 .article-content table tbody th[scope="row"] {
@@ -358,7 +362,6 @@ a:hover {
 .page-intro {
   font-size: 1.125rem;
   color: var(--text-muted);
-  max-width: 800px;
 }
 
 /* Content Section */
@@ -400,11 +403,12 @@ a:hover {
 }
 
 .hero-visual {
-  background: rgba(21, 3, 32, 0.6);
+  background: #150320;
   border: 2px dashed var(--primary);
   border-radius: 12px;
   height: 300px;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,6 +416,20 @@ a:hover {
   gap: 1rem;
 }
 
+.hero-visual:has(img) {
+  height: auto;
+  padding: 0;
+  background: #150320;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+}
 
 .hero-visual-desc {
   color: var(--primary);
@@ -419,18 +437,20 @@ a:hover {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.75rem;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  max-width: 100%;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   color: var(--text);
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -594,7 +614,6 @@ a:hover {
   color: var(--background);
 }
 
-
 /* Lab Content Sections */
 .lab-section {
   margin-bottom: 2rem;
@@ -732,25 +751,26 @@ a:hover {
 }
 
 /* ============================================
-   METHODOLOGY SPECIFIC STYLES
+   CONTENT SECTION ENHANCEMENTS
    ============================================ */
 
-/* Methodology-specific overrides */
-.methodology h2 {
-  margin-top: 3rem;
+/* Enhanced spacing for article-style content */
+.content-section h2 {
+  margin-top: 2rem;
 }
 
-.methodology h3 {
+.content-section h2:first-child,
+.content-section h2.section-title {
+  margin-top: 0;
+}
+
+.content-section h3 {
   color: var(--accent);
   margin-top: 2rem;
 }
 
-.methodology p {
+.content-section p {
   font-size: 1.0625rem;
-}
-
-.methodology .page-header {
-  margin-bottom: 3rem;
 }
 
 /* Table of Contents */
@@ -793,7 +813,7 @@ a:hover {
   opacity: 1;
 }
 
-/* Article Content */
+/* Article Content Wrapper (optional) */
 .article-content {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -819,6 +839,19 @@ a:hover {
   gap: 1rem;
 }
 
+/* Actual Images (override placeholder styling when img is present) */
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.content-image:has(img) {
+  background: none;
+  border: none;
+  height: auto;
+}
+
 .image-desc {
   color: var(--primary);
 }
@@ -831,6 +864,7 @@ a:hover {
   margin: 2rem 0;
 }
 
+.content-section table,
 .article-content table {
   width: 100%;
   border-collapse: separate;
@@ -842,6 +876,7 @@ a:hover {
   overflow: hidden;
 }
 
+.content-section table caption,
 .article-content table caption {
   font-size: 0.875rem;
   color: var(--text-muted);
@@ -851,10 +886,12 @@ a:hover {
   caption-side: top;
 }
 
+.content-section table thead,
 .article-content table thead {
   background: rgba(192, 122, 241, 0.15);
 }
 
+.content-section table thead th,
 .article-content table thead th {
   font-weight: 600;
   color: var(--primary);
@@ -864,10 +901,12 @@ a:hover {
   border-bottom: 2px solid var(--border);
 }
 
+.content-section table thead th:last-child,
 .article-content table thead th:last-child {
   border-right: none;
 }
 
+.content-section table tbody th[scope="row"],
 .article-content table tbody th[scope="row"] {
   color: var(--text);
   font-weight: 600;
@@ -879,6 +918,7 @@ a:hover {
   min-width: 180px;
 }
 
+.content-section table tbody td,
 .article-content table tbody td {
   color: var(--text-muted);
   padding: 1.25rem 1.5rem;
@@ -887,41 +927,52 @@ a:hover {
   background: rgba(21, 3, 32, 0.3);
 }
 
+.content-section table tbody td:last-child,
+.content-section table tbody th:last-child,
 .article-content table tbody td:last-child,
 .article-content table tbody th:last-child {
   border-right: none;
 }
 
+.content-section table tbody tr:last-child td,
+.content-section table tbody tr:last-child th,
 .article-content table tbody tr:last-child td,
 .article-content table tbody tr:last-child th {
   border-bottom: none;
 }
 
+.content-section table tbody tr:hover,
 .article-content table tbody tr:hover {
   background: rgba(192, 122, 241, 0.05);
 }
 
+.content-section table tbody tr:hover th[scope="row"],
 .article-content table tbody tr:hover th[scope="row"] {
   background: rgba(192, 122, 241, 0.12);
 }
 
+.content-section table tbody tr:hover td,
 .article-content table tbody tr:hover td {
   background: rgba(192, 122, 241, 0.05);
 }
 
 /* Rounded corners for table */
+.content-section table thead tr:first-child th:first-child,
 .article-content table thead tr:first-child th:first-child {
   border-top-left-radius: 7px;
 }
 
+.content-section table thead tr:first-child th:last-child,
 .article-content table thead tr:first-child th:last-child {
   border-top-right-radius: 7px;
 }
 
+.content-section table tbody tr:last-child th:first-child,
 .article-content table tbody tr:last-child th:first-child {
   border-bottom-left-radius: 7px;
 }
 
+.content-section table tbody tr:last-child td:last-child,
 .article-content table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 7px;
 }
@@ -1042,6 +1093,15 @@ a:hover {
 .download-item:hover {
   background: rgba(231, 172, 32, 0.15);
   transform: translateX(4px);
+}
+
+.download-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 }
 
 .download-icon {
@@ -1171,7 +1231,10 @@ a:hover {
   }
 
   .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.85rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Increase main content max-width */
@@ -1227,7 +1290,10 @@ a:hover {
   }
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.25rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Max content width for readability */
@@ -1409,27 +1475,32 @@ a:hover {
   }
 
   /* Responsive Tables */
+  .content-section table,
   .article-content table {
     font-size: 0.8125rem;
     min-width: 600px;
   }
 
+  .content-section table caption,
   .article-content table caption {
     font-size: 0.75rem;
     padding-bottom: 0.5rem;
   }
 
+  .content-section table thead th,
   .article-content table thead th {
     padding: 0.875rem 0.625rem;
     font-size: 0.8125rem;
   }
 
+  .content-section table tbody th[scope="row"],
   .article-content table tbody th[scope="row"] {
     min-width: 110px;
     padding: 0.875rem 0.625rem;
     font-size: 0.8125rem;
   }
 
+  .content-section table tbody td,
   .article-content table tbody td {
     padding: 0.875rem 0.625rem;
     font-size: 0.75rem;

@@ -14,7 +14,7 @@
     <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
 </head>
 
-<body class="methodology">
+<body>
     <div class="site-wrapper">
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
@@ -33,9 +33,9 @@
         <!-- Navigation -->
         <nav class="site-nav">
             <ul class="nav-list">
-                <li class="nav-item"><a href="learning-lab.html" class="nav-link">Learning Lab</a></li>
-                <li class="nav-item"><a href="prompting.html" class="nav-link">Prompting</a></li>
                 <li class="nav-item"><a href="methodology.html" class="nav-link active">Methodology</a></li>
+                <li class="nav-item"><a href="prompting.html" class="nav-link">Prompting</a></li>
+                <li class="nav-item"><a href="learning-lab.html" class="nav-link">Learning Lab</a></li>
                 <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
                 <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
             </ul>
@@ -45,181 +45,214 @@
         <main class="site-main">
             <!-- Page Header -->
             <div class="page-header">
-                <h1 class="page-title">The Orchestration Model</h1>
+                <h1 class="page-title">Methodology</h1>
+                <p class="page-intro">Two complementary approaches for working with AI effectively: orchestration for
+                    managing complex projects, and pair programming for collaborative problem-solving.</p>
             </div>
 
-            <!-- Table of Contents -->
-            <nav class="toc">
-                <h2 class="toc-title">Table of Contents</h2>
-                <ol class="toc-list">
-                    <li><a href="#introduction" class="toc-link">1. Introduction: Why Traditional Approaches Fall
-                            Short</a></li>
-                    <li><a href="#model" class="toc-link">2. The Orchestration Model Explained</a></li>
-                    <li><a href="#mindset" class="toc-link">3. Mindset: Treating AI as a Teammate</a></li>
-                    <li><a href="#communication" class="toc-link">4. Communication Patterns</a></li>
-                    <li><a href="#conclusion" class="toc-link">5. Putting It All Together</a></li>
-                </ol>
-            </nav>
+            <!-- Section 1: Working with AI -->
+            <section class="content-section" id="intro">
+                <h2 class="section-title">Working with AI</h2>
 
-            <!-- Article Content -->
-            <article class="article-content">
-                <h2 class="sr-only">The Orchestration Model</h2>
-                <!-- Section 1 -->
-                <section id="introduction">
-                    <h2>Introduction: Why Traditional Approaches Fall Short</h2>
-                    <p>Most developers approach AI as a productivity tool—a way to generate code faster. They type a
-                        command, get some code back, and either use it or discard it. This transactional approach treats
-                        AI like a search engine for code snippets.</p>
-                    <p>The problem? This fundamentally misunderstands what AI can do. Modern AI coding assistants like
-                        Cursor, ChatGPT, and Copilot aren't just code generators—they're capable of understanding
-                        context, following complex instructions, and iterating on solutions. But to unlock this
-                        capability, you need a different mental model.</p>
-                    <p>There's a gap between code literacy (knowing how to write code) and AI fluency (knowing how to
-                        work with AI systems). This gap leads to frustration when AI doesn't "just know" what you want,
-                        and it causes developers to miss the real value: AI as a collaborative partner.</p>
-                </section>
+                <p>AI is changing how we build software. Tools like Cursor, Claude Code, and Copilot can understand
+                    code, generate solutions, and help you reason through problems. The potential is real. But AI is
+                    still a tool. And like any tool, you have to learn how to use it.</p>
+
+                <p>It's easy to get frustrated. The model loops. It forgets what you told it. It gives you something
+                    that almost works but doesn't. You can end up treating it like a fancy autocomplete—useful for
+                    boilerplate, unreliable for anything complex. Or you can learn to use it well. With the right
+                    approach, AI becomes a way to rapidly build production-quality code, think through hard problems
+                    faster, and multiply what you're capable of shipping.</p>
+
+                <p>This page covers two methodologies you can incorporate into your everyday work. <a
+                        href="#orchestration"><strong>The Orchestration Model</strong></a> treats AI like a
+                    development team. You distribute work across multiple conversations, each with a specific role
+                    and scope. This prevents context overload and mirrors how real engineering teams operate. <a
+                        href="#pair-programming"><strong>Pair Programming</strong></a> treats AI like a colleague
+                    sitting next to you. You think out loud, iterate together, and work through problems
+                    collaboratively. This mode works inside orchestration or on its own.</p>
 
                 <div class="content-image">
-                    <span class="image-label">Conceptual Diagram</span>
-                    <span class="image-desc">Traditional vs. Orchestration Approach</span>
+                    <img src="images/tradition-vs-orchestration.png" alt="Traditional vs. Orchestration Approach">
                 </div>
+            </section>
 
-                <!-- Section 2 -->
-                <section id="model">
-                    <h2>The Orchestration Model Explained</h2>
-                    <p>The orchestration model reframes how you work with AI. Instead of issuing commands, you conduct a
-                        conversation. Instead of accepting or rejecting output, you guide refinement. The core loop
-                        looks like this:</p>
-                    <p><strong>Human sets direction</strong> → AI generates → <strong>Human reviews</strong> →
-                        Refinement → Iteration</p>
-                    <p>You stay in the architect role. You decide what to build, evaluate trade-offs, and maintain the
-                        vision. AI handles implementation details, suggests approaches, and helps you explore
-                        possibilities faster than you could alone.</p>
-                    <p>This isn't about letting AI write all your code. It's about having a conversation where AI
-                        contributes ideas, you provide constraints and context, and together you arrive at better
-                        solutions than either could produce independently.</p>
+            <!-- Section 2: The Orchestration Model -->
+            <section class="content-section" id="orchestration">
+                <h2 class="section-title">The Orchestration Model</h2>
 
-                    <h3>Key Principles</h3>
-                    <p>The orchestration model rests on three foundations:</p>
-                    <p><strong>Context is cumulative.</strong> Each exchange builds on previous ones. AI remembers what
-                        you've discussed, the decisions you've made, and the patterns you prefer.</p>
-                    <p><strong>Iteration is expected.</strong> First attempts aren't final. You refine through
-                        conversation, just as you would with a human pair programming partner.</p>
-                    <p><strong>You maintain control.</strong> AI suggests, you decide. You're the architect, the quality
-                        gate, and the strategic thinker.</p>
+                <p>The core idea: don't treat AI as one assistant that handles everything. Treat it like a team.</p>
 
-                    <h3>Approach Comparison</h3>
-                    <div class="table-wrapper">
-                        <table>
-                            <caption>Comparison of Traditional vs. Orchestration Approaches to AI-Assisted Development
-                            </caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Aspect</th>
-                                    <th scope="col">Traditional Approach</th>
-                                    <th scope="col">Orchestration Model</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Interaction Style</th>
-                                    <td>Command-based, transactional</td>
-                                    <td>Conversational, collaborative</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Context Sharing</th>
-                                    <td>Minimal, single-query focused</td>
-                                    <td>Rich, cumulative across session</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Iteration Pattern</th>
-                                    <td>Accept or reject output</td>
-                                    <td>Refine through dialogue</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Developer Role</th>
-                                    <td>Code reviewer</td>
-                                    <td>Architect and conductor</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Expected Outcome</th>
-                                    <td>Immediate, finished code</td>
-                                    <td>Iterative improvement toward solution</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+                <p>When you dump an entire problem into a single conversation—architecture, implementation, testing,
+                    documentation—you're asking one entity to juggle too much. Context piles up. The model gets
+                    confused. You end up in loops.</p>
+
+                <p>Instead, distribute work across multiple chats. Each conversation has a specific role and focused
+                    scope. You coordinate the pieces the same way you'd coordinate a real development team.</p>
+
+                <h3>Role Levels</h3>
+
+                <p>These aren't different AI models. They're different conversation contexts with specialized
+                    prompts and constraints. You define the role by how you frame the conversation.</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Role Levels in AI Orchestration</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Role</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col">When to Use</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Architect</th>
+                                <td>System design, constraints, trade-offs</td>
+                                <td>New features, major refactors, technical strategy</td>
+                                <td>"Define auth architecture with OAuth and JWT"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Orchestrator</th>
+                                <td>Break work into tasks, manage handoffs</td>
+                                <td>Sprint planning, epic decomposition</td>
+                                <td>"Break this story into implementable tasks"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Senior</th>
+                                <td>Complex logic, integration, code review</td>
+                                <td>Core business logic, tricky bugs</td>
+                                <td>"Build email validation with edge cases"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mid-Level</th>
+                                <td>Standard features, established patterns</td>
+                                <td>CRUD operations, UI components</td>
+                                <td>"Create registration form with validation"</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Junior</th>
+                                <td>Boilerplate, scaffolding, repetitive tasks</td>
+                                <td>Project setup, config files</td>
+                                <td>"Generate test fixtures for 10 scenarios"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <div class="content-image">
-                    <span class="image-label">Process Diagram</span>
-                    <span class="image-desc">Orchestration Loop Visualization</span>
+                    <img src="images/the-ladder.png" alt="Distributed Team Approach">
                 </div>
 
-                <!-- Section 3 -->
-                <section id="mindset">
-                    <h2>Mindset: Treating AI as a Teammate</h2>
-                    <p>The shift from "code generator" to "programming partner" requires a mental reframe. Here's what
-                        changes:</p>
+                <h3>The Workflow</h3>
 
-                    <h3>Provide Context First</h3>
-                    <p>Before asking AI to write code, share what you're building, why it matters, and what constraints
-                        exist. Context helps AI give you relevant suggestions rather than generic solutions.</p>
+                <p><strong>Start with acceptance criteria.</strong> A user story, a PBI, or just a clear statement
+                    of what you're building.</p>
 
-                    <h3>Be Clear About Intent</h3>
-                    <p>Describe your goal, not the implementation. "I need to validate user emails" is more useful than
-                        "write a regex function." Let AI help you discover the best approach.</p>
+                <p><strong>Break it into phases.</strong> Use your orchestrator chat to decompose the work. Ask:
+                    "What are the major phases for building this?" You don't need perfect clarity upfront—let the
+                    process reveal what you need.</p>
 
-                    <h3>Build Incrementally</h3>
-                    <p>Don't try to specify everything upfront. Start with core functionality, see what AI produces,
-                        then refine and expand. This mirrors how you'd work with a human partner.</p>
+                <p><strong>Generate prompts for each phase.</strong> Your orchestrator writes the instructions for
+                    specialist chats. This ensures consistency and proper context handoff.</p>
 
-                    <h3>Maintain Your Role</h3>
-                    <p>You're the architect. You evaluate AI's suggestions, push back when needed, and make the final
-                        call. AI accelerates your work but doesn't replace your judgment.</p>
-                </section>
+                <p><strong>Distribute to specialist chats.</strong> Architecture goes to an architect chat.
+                    Implementation goes to senior or mid-level chats. Boilerplate goes to junior chats. Each
+                    conversation stays scoped to its task.</p>
 
-                <!-- Section 4 -->
-                <section id="communication">
-                    <h2>Communication Patterns</h2>
-                    <p>Effective AI collaboration follows patterns similar to good human communication:</p>
+                <p><strong>Bring results back.</strong> When a specialist finishes, return to the orchestrator.
+                    Report what's done. Get the next task. The orchestrator maintains the thread while specialists
+                    stay focused.</p>
 
-                    <h3>Start With Why</h3>
-                    <p>Explain what you're trying to accomplish before diving into specifics. "I'm building a dashboard
-                        that tracks user signups" gives AI more to work with than "create a chart."</p>
+                <h3>Managing Handoffs</h3>
 
-                    <h3>Break Down Complexity</h3>
-                    <p>Large tasks become manageable when split into steps. Rather than "build a complete authentication
-                        system," try "first, let's handle password hashing."</p>
+                <p><strong>When to start a new chat:</strong> When the task has a different scope than your current
+                    conversation. Switching from architecture to implementation? New chat. Debugging to new feature?
+                    New chat. Fresh context is a feature.</p>
 
-                    <h3>Use Examples</h3>
-                    <p>Show AI what good looks like. "Similar to how Material UI handles form validation" gives AI a
-                        concrete reference point.</p>
+                <p><strong>What to include in a handoff:</strong> Clear scope (what this chat handles), necessary
+                    context (decisions already made), and success criteria (what "done" looks like). Think of it
+                    like a well-written ticket.</p>
 
-                    <h3>Iterate on Output</h3>
-                    <p>When AI's first attempt isn't quite right, don't start over. Say what needs to change: "This
-                        works, but let's make it handle null values."</p>
+                <p><strong>Returning to orchestrator:</strong> "Email validation complete, tests passing, ready for
+                    integration." The orchestrator tracks progress and sequences the next task.</p>
 
-                    <h3>Treat It Like Collaboration</h3>
-                    <p>Think of the exchange as a conversation, not a transaction. You're working together toward a
-                        solution, not extracting code from a vending machine.</p>
-                </section>
+                <h3>Practical Example</h3>
 
-                <!-- Section 5 -->
-                <section id="conclusion">
-                    <h2>Putting It All Together</h2>
-                    <p>The orchestration model transforms AI from a code snippet generator into a genuine programming
-                        partner. By providing context, iterating through conversation, and maintaining your role as
-                        architect, you unlock AI's real potential.</p>
-                    <p>This approach takes practice. You'll develop intuition about when to be specific versus when to
-                        ask AI for suggestions, when to accept its approach versus when to redirect, and how to build
-                        context efficiently.</p>
-                    <p>Ready to see the orchestration model in action? Head to the <a href="learning-lab.html">Learning
-                            Lab</a> for video demonstrations of real coding scenarios. Or explore the <a
-                            href="prompting.html">Prompting</a> page for detailed techniques on crafting effective
-                        prompts.</p>
-                </section>
-            </article>
+                <p>I use one chat as my orchestrator throughout a project. When it identifies a task like "build
+                    email validation," I open a new chat, paste the task specification, complete the work, then
+                    report back. The orchestrator decides what's next.</p>
+
+                <p>This mirrors how I manage my actual engineering teams. I don't give one person every task. I
+                    distribute work based on skill sets and coordinate the pieces. Same principle, new context.</p>
+            </section>
+
+            <!-- Section 3: Pair Programming -->
+            <section class="content-section" id="pair-programming">
+                <h2 class="section-title">Pair Programming</h2>
+
+                <p>Pair programming is for when you're deep in a specific problem and need to think it through. It
+                    works inside orchestration (within a specialist chat) or on its own for focused work.</p>
+
+                <p>The approach: treat AI like a colleague sitting next to you. Not commands and outputs.
+                    Conversation.</p>
+
+                <h3>Think Out Loud</h3>
+
+                <p>Be verbose. Vomit everything you know and think. AI can handle messy input—in fact, it needs it.
+                    The more context you provide, the better predictions it can make.</p>
+
+                <p>I use voice-to-text to just talk through problems. Disagree with myself. Contradict. Work my
+                    thoughts through. Half-formed ideas are fine. Stream of consciousness is fine. All of it is
+                    useful signal.</p>
+
+                <p>Share the scope of what you're trying to do. "Here's the real problem I'm solving. Help me break
+                    it down." Don't hold back context because you think it's too much.</p>
+
+                <h3>Ask Questions</h3>
+
+                <p>Treat it like a conversation. "I'm not sure about this approach—what do you think?" "What am I
+                    missing here?" "Is there a simpler way to do this?"</p>
+
+                <p>The Jarvis model from Iron Man is actually right. Tony Stark doesn't just bark commands. He
+                    thinks out loud, asks questions, works through problems in dialogue. That's effective AI
+                    collaboration.</p>
+
+                <h3>When to Start Fresh</h3>
+
+                <p>Conversations get heavy. Responses start getting confused. The AI forgets things you established
+                    earlier. This is normal—it means the context window is full of noise.</p>
+
+                <p>When this happens, start a new chat. Summarize what you've figured out. Carry forward the
+                    decisions that matter. Leave the cruft behind.</p>
+
+                <p>A new chat is like taking a walk when you're stuck on a problem. You're not losing
+                    everything—you're clearing your head. The important stuff stays with you.</p>
+
+                <p>Knowing when to start fresh is one of the most valuable skills you can develop. Don't treat
+                    conversations as investments you can't abandon. Treat them as tools you pick up and put down.
+                </p>
+
+                <h3>Inside Orchestration</h3>
+
+                <p>Pair programming and orchestration work together. Your orchestrator breaks down a problem and
+                    assigns you a task. In that specialist chat, you're pairing—thinking out loud, iterating, asking
+                    questions. When context gets heavy, you start fresh with a clean summary. When the task is done,
+                    you return to the orchestrator.</p>
+
+                <p>The modes aren't separate. They're different tools for different moments in the same workflow.
+                </p>
+            </section>
+
+            <!-- Next Steps -->
+            <section class="content-section">
+                <h2 class="section-title">Next Steps</h2>
+                <p>See these patterns in action in the <a href="learning-lab.html">Learning Lab</a>, or explore
+                    <a href="prompting.html">Prompting</a> for techniques on crafting effective prompts.
+                </p>
+            </section>
+
         </main>
 
         <!-- Footer -->
