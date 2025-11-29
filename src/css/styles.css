@@ -39,8 +39,6 @@
 
 .site-logo,
 .btn,
-.lab-nav-btn,
-.lab-counter,
 .comparison-example,
 .tool-link,
 .form-label,
@@ -499,43 +497,6 @@ a:hover {
 /* ============================================
    LEARNING LAB SPECIFIC STYLES
    ============================================ */
-
-/* Lab Navigation */
-.lab-nav {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lab-nav-btn {
-  padding: 0.75rem 1.5rem;
-  background: transparent;
-  border: 1px solid var(--primary);
-  border-radius: 8px;
-  color: var(--text);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.lab-nav-btn:hover {
-  background: var(--primary);
-  color: var(--background);
-}
-
-.lab-nav-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-.lab-counter {
-  color: var(--accent);
-  font-weight: 600;
-}
 
 /* Lab Container */
 .lab-container {
@@ -1270,16 +1231,6 @@ a:hover {
   .nav-link {
     font-size: 1.125rem;
     padding: 1rem 1.25rem;
-  }
-
-  /* Hide lab navigation button text on mobile */
-  .lab-nav-btn .btn-text {
-    display: none;
-  }
-
-  .lab-nav-btn .arrow-left,
-  .lab-nav-btn .arrow-right {
-    font-size: 1.25rem;
   }
 
   .site-main {
