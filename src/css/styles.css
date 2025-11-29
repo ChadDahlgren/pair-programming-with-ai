@@ -22,33 +22,8 @@
 }
 
 /* ============================================
-   ACCESSIBILITY
-   ============================================ */
-/* Screen reader only - visually hidden but accessible to screen readers */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* ============================================
    TYPOGRAPHY
    ============================================ */
-.hero-visual-label,
-.video-label,
-.image-label {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
 
 .comparison-label {
   font-family: var(--font-mono);
@@ -80,10 +55,7 @@
 
 .content-section table caption,
 .content-section table thead th,
-.content-section table tbody th[scope="row"],
-.article-content table caption,
-.article-content table thead th,
-.article-content table tbody th[scope="row"] {
+.content-section table tbody th[scope="row"] {
   font-family: var(--font-mono);
 }
 
@@ -431,11 +403,6 @@ a:hover {
   border-radius: 10px;
 }
 
-.hero-visual-desc {
-  color: var(--primary);
-  font-size: 1.125rem;
-}
-
 .hero-title {
   font-size: 2.75rem;
   margin-bottom: 1rem;
@@ -657,28 +624,6 @@ a:hover {
    PROMPTING SPECIFIC STYLES
    ============================================ */
 
-/* Principles List */
-.principles-list {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.principles-list li {
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  background: rgba(192, 122, 241, 0.05);
-  border-left: 3px solid var(--primary);
-  border-radius: 4px;
-  color: var(--text);
-}
-
-.principles-list li::before {
-  content: "→";
-  color: var(--accent);
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
 /* Comparison Grid */
 .comparison-grid {
   display: grid;
@@ -728,28 +673,6 @@ a:hover {
   font-style: italic;
 }
 
-/* Resources List */
-.resources-list {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.resources-list li {
-  padding: 1rem 1.5rem;
-  margin-bottom: 0.75rem;
-  background: rgba(231, 172, 32, 0.1);
-  border-radius: 8px;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.resources-list li::before {
-  content: "📄";
-  font-size: 1.25rem;
-}
-
 /* ============================================
    CONTENT SECTION ENHANCEMENTS
    ============================================ */
@@ -771,58 +694,6 @@ a:hover {
 
 .content-section p {
   font-size: 1.0625rem;
-}
-
-/* Table of Contents */
-.toc {
-  background: var(--surface);
-  border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 3rem;
-}
-
-.toc-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-}
-
-.toc-list {
-  list-style: none;
-}
-
-.toc-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.toc-list li:last-child {
-  border-bottom: none;
-}
-
-.toc-link {
-  color: var(--text);
-  display: block;
-  transition: color 0.2s;
-}
-
-.toc-link:hover {
-  color: var(--primary);
-  opacity: 1;
-}
-
-/* Article Content Wrapper (optional) */
-.article-content {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 3rem;
-}
-
-.article-content h2:first-child {
-  margin-top: 0;
 }
 
 /* Image Placeholder */
@@ -852,10 +723,6 @@ a:hover {
   height: auto;
 }
 
-.image-desc {
-  color: var(--primary);
-}
-
 /* Table Styles */
 .table-wrapper {
   width: 100%;
@@ -864,8 +731,7 @@ a:hover {
   margin: 2rem 0;
 }
 
-.content-section table,
-.article-content table {
+.content-section table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -876,8 +742,7 @@ a:hover {
   overflow: hidden;
 }
 
-.content-section table caption,
-.article-content table caption {
+.content-section table caption {
   font-size: 0.875rem;
   color: var(--text-muted);
   text-align: left;
@@ -886,13 +751,11 @@ a:hover {
   caption-side: top;
 }
 
-.content-section table thead,
-.article-content table thead {
+.content-section table thead {
   background: rgba(192, 122, 241, 0.15);
 }
 
-.content-section table thead th,
-.article-content table thead th {
+.content-section table thead th {
   font-weight: 600;
   color: var(--primary);
   text-align: left;
@@ -901,13 +764,11 @@ a:hover {
   border-bottom: 2px solid var(--border);
 }
 
-.content-section table thead th:last-child,
-.article-content table thead th:last-child {
+.content-section table thead th:last-child {
   border-right: none;
 }
 
-.content-section table tbody th[scope="row"],
-.article-content table tbody th[scope="row"] {
+.content-section table tbody th[scope="row"] {
   color: var(--text);
   font-weight: 600;
   background: rgba(192, 122, 241, 0.08);
@@ -918,8 +779,7 @@ a:hover {
   min-width: 180px;
 }
 
-.content-section table tbody td,
-.article-content table tbody td {
+.content-section table tbody td {
   color: var(--text-muted);
   padding: 1.25rem 1.5rem;
   border-right: 1px solid rgba(192, 122, 241, 0.1);
@@ -928,52 +788,41 @@ a:hover {
 }
 
 .content-section table tbody td:last-child,
-.content-section table tbody th:last-child,
-.article-content table tbody td:last-child,
-.article-content table tbody th:last-child {
+.content-section table tbody th:last-child {
   border-right: none;
 }
 
 .content-section table tbody tr:last-child td,
-.content-section table tbody tr:last-child th,
-.article-content table tbody tr:last-child td,
-.article-content table tbody tr:last-child th {
+.content-section table tbody tr:last-child th {
   border-bottom: none;
 }
 
-.content-section table tbody tr:hover,
-.article-content table tbody tr:hover {
+.content-section table tbody tr:hover {
   background: rgba(192, 122, 241, 0.05);
 }
 
-.content-section table tbody tr:hover th[scope="row"],
-.article-content table tbody tr:hover th[scope="row"] {
+.content-section table tbody tr:hover th[scope="row"] {
   background: rgba(192, 122, 241, 0.12);
 }
 
-.content-section table tbody tr:hover td,
-.article-content table tbody tr:hover td {
+.content-section table tbody tr:hover td {
   background: rgba(192, 122, 241, 0.05);
 }
 
 /* Rounded corners for table */
-.content-section table thead tr:first-child th:first-child,
-.article-content table thead tr:first-child th:first-child {
+.content-section table thead tr:first-child th:first-child {
   border-top-left-radius: 7px;
 }
 
-.content-section table thead tr:first-child th:last-child,
-.article-content table thead tr:first-child th:last-child {
+.content-section table thead tr:first-child th:last-child {
   border-top-right-radius: 7px;
 }
 
-.content-section table tbody tr:last-child th:first-child,
-.article-content table tbody tr:last-child th:first-child {
+.content-section table tbody tr:last-child th:first-child {
   border-bottom-left-radius: 7px;
 }
 
-.content-section table tbody tr:last-child td:last-child,
-.article-content table tbody tr:last-child td:last-child {
+.content-section table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 7px;
 }
 
@@ -1339,10 +1188,6 @@ a:hover {
     padding: 3.5rem;
   }
 
-  .article-content {
-    padding: 4rem;
-  }
-
   /* Comparison grid - maintain 2 columns but with better spacing */
   .comparison-grid {
     gap: 3rem;
@@ -1475,33 +1320,28 @@ a:hover {
   }
 
   /* Responsive Tables */
-  .content-section table,
-  .article-content table {
+  .content-section table {
     font-size: 0.8125rem;
     min-width: 600px;
   }
 
-  .content-section table caption,
-  .article-content table caption {
+  .content-section table caption {
     font-size: 0.75rem;
     padding-bottom: 0.5rem;
   }
 
-  .content-section table thead th,
-  .article-content table thead th {
+  .content-section table thead th {
     padding: 0.875rem 0.625rem;
     font-size: 0.8125rem;
   }
 
-  .content-section table tbody th[scope="row"],
-  .article-content table tbody th[scope="row"] {
+  .content-section table tbody th[scope="row"] {
     min-width: 110px;
     padding: 0.875rem 0.625rem;
     font-size: 0.8125rem;
   }
 
-  .content-section table tbody td,
-  .article-content table tbody td {
+  .content-section table tbody td {
     padding: 0.875rem 0.625rem;
     font-size: 0.75rem;
     line-height: 1.4;

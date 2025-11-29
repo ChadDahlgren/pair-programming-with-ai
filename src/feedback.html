@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback - Pair Programming with AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
 </head>
+
 <body>
     <div class="site-wrapper">
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        
+
         <!-- Header -->
         <header class="site-header">
             <a href="index.html" class="site-logo">
@@ -25,7 +29,7 @@
                 <span></span>
             </label>
         </header>
-        
+
         <!-- Navigation -->
         <nav class="site-nav">
             <ul class="nav-list">
@@ -36,15 +40,17 @@
                 <li class="nav-item"><a href="feedback.html" class="nav-link active">Feedback</a></li>
             </ul>
         </nav>
-        
+
         <!-- Main Content -->
         <main class="site-main">
             <!-- Page Header -->
             <div class="page-header">
                 <h1 class="page-title">Share Your Feedback</h1>
-                <p class="page-intro">Your input helps improve this resource. Share what you found useful, suggest topics you'd like to see covered, or let me know about your experiences applying the orchestration model.</p>
+                <p class="page-intro">Your input helps improve this resource. Share what you found useful, suggest
+                    topics you'd like to see covered, or let me know about your experiences applying the orchestration
+                    model.</p>
             </div>
-            
+
             <!-- Form -->
             <div class="form-container">
                 <form action="#" method="POST">
@@ -53,68 +59,46 @@
                         <label for="firstName" class="form-label">
                             First Name <span class="required">*</span>
                         </label>
-                        <input 
-                            type="text" 
-                            id="firstName" 
-                            name="firstName" 
-                            class="form-input" 
-                            placeholder="Enter your first name"
-                            required
-                        >
+                        <input type="text" id="firstName" name="firstName" class="form-input"
+                            placeholder="Enter your first name" required>
                     </div>
-                    
+
                     <!-- Last Name -->
                     <div class="form-group">
                         <label for="lastName" class="form-label">
                             Last Name <span class="required">*</span>
                         </label>
-                        <input 
-                            type="text" 
-                            id="lastName" 
-                            name="lastName" 
-                            class="form-input" 
-                            placeholder="Enter your last name"
-                            required
-                        >
+                        <input type="text" id="lastName" name="lastName" class="form-input"
+                            placeholder="Enter your last name" required>
                     </div>
-                    
+
                     <!-- Email -->
                     <div class="form-group">
                         <label for="email" class="form-label">
                             Email Address <span class="required">*</span>
                         </label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            name="email" 
-                            class="form-input" 
-                            placeholder="your.email@example.com"
-                            required
-                        >
+                        <input type="email" id="email" name="email" class="form-input"
+                            placeholder="your.email@example.com" required>
                         <p class="form-hint">We'll only use this to respond to your feedback</p>
                     </div>
-                    
+
                     <!-- Feedback -->
                     <div class="form-group">
                         <label for="feedback" class="form-label">
                             Feedback <span class="required">*</span>
                         </label>
-                        <textarea 
-                            id="feedback" 
-                            name="feedback" 
-                            class="form-textarea" 
-                            placeholder="Share your thoughts, suggestions, or questions..."
-                            required
-                        ></textarea>
-                        <p class="form-hint">What did you find most useful? What topics would you like to see covered?</p>
+                        <textarea id="feedback" name="feedback" class="form-textarea"
+                            placeholder="Share your thoughts, suggestions, or questions..." required></textarea>
+                        <p class="form-hint">What did you find most useful? What topics would you like to see covered?
+                        </p>
                     </div>
-                    
+
                     <!-- Submit Button -->
                     <button type="submit" class="submit-button">Send Feedback</button>
                 </form>
             </div>
         </main>
-        
+
         <!-- Footer -->
         <footer class="site-footer">
             <nav class="footer-nav">
@@ -127,5 +111,5 @@
         </footer>
     </div>
 </body>
-</html>
 
+</html>
