@@ -542,6 +542,13 @@ a:hover {
   color: var(--background);
 }
 
+.lab-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
 /* Lab Content Sections */
 .lab-section {
   margin-bottom: 2rem;
