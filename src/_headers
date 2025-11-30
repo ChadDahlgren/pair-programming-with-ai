@@ -1,0 +1,21 @@
+# Cloudflare Pages Headers Configuration
+# This ensures video files are served correctly with proper MIME types and without compression
+
+/media/*.mp4
+  Content-Type: video/mp4
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000
+
+/media/**/*.mp4
+  Content-Type: video/mp4
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=31536000
+
+/media/*.png
+  Content-Type: image/png
+  Cache-Control: public, max-age=31536000
+
+/media/**/*.png
+  Content-Type: image/png
+  Cache-Control: public, max-age=31536000
+
