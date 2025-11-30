@@ -530,6 +530,10 @@ a:hover {
   overflow: hidden;
 }
 
+.video-container video {
+  overflow: visible;
+}
+
 .video-placeholder-icon {
   width: 80px;
   height: 80px;
@@ -547,6 +551,19 @@ a:hover {
   height: 100%;
   object-fit: contain;
   border-radius: 10px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.lab-video::-webkit-media-controls {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.lab-video::-webkit-media-controls-panel {
+  display: flex !important;
+  opacity: 1 !important;
 }
 
 /* Lab Content Sections */
